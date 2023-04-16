@@ -5,7 +5,7 @@ let navbar = document.querySelector('.navbar');
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
-}
+};
 
 
 /*=============== scroll sections active link =====================*/
@@ -53,7 +53,7 @@ var swiper = new Swiper(".mySwiper", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-}); 
+});
 
 
 /*=============== dark light mode =====================*/
@@ -66,14 +66,14 @@ darkModeIcon.onclick = () => {
 
 
 /*=============== dark light mode =====================*/
-ScrollReveal ({
+ScrollReveal({
     reset: true,
     distance: '80px',
     duration: 2000,
     delay: 200
 });
 
-ScrollReveal().reveal('.home-content, .heading', {origin: 'top'});
-ScrollReveal().reveal('.home-img img, .services-container, .portfolio-box, .testimonial-wrapper, .contact form', {origin: 'bottom'});
-ScrollReveal().reveal('.home-content h1, .about-img img', {origin: 'left'});
-ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', {origin: 'right'});
+ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+ScrollReveal().reveal('.home-img img, .services-container, .portfolio-box, .testimonial-wrapper, .contact form', { origin: 'bottom' });
+ScrollReveal().reveal('.home-content h1, .about-img img', { origin: 'left' });
+ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', { origin: 'right' });

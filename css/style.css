@@ -17,12 +17,6 @@
     --main-color: #754ef9;
     --white-color: #fdfdfd;
     --shadow-color: rgba(0, 0, 0, .2);
-
-    /* change here */
-    /* --bg-color: #1f242d;
-    --second-bg-color: #323946;
-    --text-color: #fff;
-    --main-color: #0ef; */
 }
 
 .dark-mode {
@@ -192,11 +186,8 @@ section {
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    /* change here */
-    /* width: 100vw;
-    height: 100vh; */
     width: 768px;
-    height: 768px;
+    height: 100vh;
     overflow: hidden;
     pointer-events: none;
 }
@@ -205,8 +196,8 @@ section {
     position: absolute;
     top: 0;
     right: 0;
-    width: 768px;
-    height: 768px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -286,9 +277,9 @@ section {
     right: 0;
     width: 0;
     height: 0;
-    border-top: 384px solid var(--main-color);
+    border-top: 50vh solid var(--main-color);
     border-right: 384px solid var(--main-color);
-    border-bottom: 384px solid var(--main-color);
+    border-bottom: 50vh solid var(--main-color);
     border-left: 384px solid transparent;
 }
 
@@ -296,7 +287,8 @@ section {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 100%;
+    height: 100vh;
+    /* width: 100vw; */
     pointer-events: none;
 }
 
@@ -364,7 +356,7 @@ span {
 }
 
 .services-container .services-box:hover {
-    box-shadow: 0 .1rem 2rem --shadow-color;
+    box-shadow: 0 .1rem 2rem var(--shadow-color);
     transform: scale(1.02);
 }
 
@@ -486,7 +478,7 @@ span {
     overflow: hidden;
 }
 
-.testimonial-container .testimonial-slide {
+.testimonial-content .testimonial-slide {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -527,7 +519,7 @@ span {
 }
 
 .testimonial-box .swiper-button-prev {
-    right: 0;
+    left: 0;
 }
 
 .testimonial-box .swiper-pagination-bullet {
@@ -637,7 +629,7 @@ span {
         height: 85.8rem;
     }
 
-    .hone .profession-container .profession-box {
+    .home .profession-container .profession-box {
         right: -12rem;
         height: 85.8rem;
     }
@@ -672,7 +664,7 @@ span {
         color: var(--main-color);
     }
 
-    .navbar a.active::hover {
+    .navbar a.active::before {
         background: var(--main-color);
         opacity: .7;
     }
@@ -803,7 +795,7 @@ span {
     }
 
     .home .profession-box .profession:nth-child(2) {
-        transform: rotate(0deg) translate(0px, -335px);
+        transform: rotate(0deg) translate(0, -335px);
     }
 
     .home .profession-box .profession:nth-child(3) {
