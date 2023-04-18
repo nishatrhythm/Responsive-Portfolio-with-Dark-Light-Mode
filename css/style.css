@@ -59,14 +59,20 @@ body {
     font-weight: 600;
     cursor: default;
     margin-right: auto;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
 }
 
 .navbar a {
     position: relative;
+    display: inline-block;
     font-size: 1.7rem;
     color: var(--white-color);
     font-weight: 500;
     margin-right: 3.5rem;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
 }
 
 .header.sticky .navbar a {
@@ -96,6 +102,9 @@ body {
     font-size: 2.4rem;
     color: var(--white-color);
     cursor: pointer;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 3.2s;
 }
 
 .header.sticky #darkMode-icon {
@@ -154,6 +163,9 @@ section {
     color: var(--main-color);
     margin: 2.5rem 1.5rem 3rem 0;
     transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
 }
 
 .home-content .social-media a:hover {
@@ -173,6 +185,9 @@ section {
     font-weight: 600;
     border: .2rem solid transparent;
     transition: .5s ease;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
 }
 
 .btn:hover {
@@ -202,34 +217,9 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: professionRotate 13s ease-out infinite;
-}
-
-@keyframes professionRotate {
-
-    0%,
-    20% {
-        transform: rotate(0deg);
-    }
-
-    25%,
-    45% {
-        transform: rotate(-90deg);
-    }
-
-    50%,
-    70% {
-        transform: rotate(-180deg);
-    }
-
-    75%,
-    95% {
-        transform: rotate(-270deg);
-    }
-
-    100% {
-        transform: rotate(-360deg);
-    }
+    opacity: 0;
+    animation: slideLeft 1s ease forwards, professionRotate 13s ease-out infinite;
+    animation-delay: 2.5s, 3.5s;
 }
 
 .home .profession-box .profession {
@@ -281,6 +271,9 @@ section {
     border-right: 384px solid var(--main-color);
     border-bottom: 50vh solid var(--main-color);
     border-left: 384px solid transparent;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1.5s;
 }
 
 .home-img img {
@@ -290,6 +283,9 @@ section {
     height: 100vh;
     /* width: 100vw; */
     pointer-events: none;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 2.8s;
 }
 
 span {
@@ -606,6 +602,69 @@ span {
     font-size: 2.4rem;
     color: #333;
 }
+
+
+/* KEYFRAMES ANIMATION */
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes professionRotate {
+
+    0%,
+    20% {
+        transform: rotate(0deg);
+    }
+
+    25%,
+    45% {
+        transform: rotate(-90deg);
+    }
+
+    50%,
+    70% {
+        transform: rotate(-180deg);
+    }
+
+    75%,
+    95% {
+        transform: rotate(-270deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
 
 ::-moz-selection {
     /* Code for Firefox */
